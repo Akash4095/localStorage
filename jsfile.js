@@ -8,7 +8,17 @@ myForm.addEventListener('submit',onSubmit);
 
 function onSubmit(e){
     e.preventDefault();
-    localStorage.setItem('name',name.value);
-    localStorage.setItem('email',email.value);
+    // localStorage.setItem('name',name.value);
+    // localStorage.setItem('email',email.value);
+
+    const userDetails= {
+        name:name.value,
+        email:email.value
+    }
+    
+    const obj= JSON.stringify(userDetails)
+    localStorage.setItem('userDetails',obj)
+    
+
 }
 
